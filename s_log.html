@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<!--********************************************-->
+<!--*       Generated from PreTeXt source      *-->
+<!--*                                          *-->
+<!--*         https://pretextbook.org          *-->
+<!--*                                          *-->
+<!--********************************************-->
+<html lang="en-US" dir="ltr">
+<!--******************************************-->
+<!--*  Authored with PreTeXt                 *-->
+<!--*  pretextbook.org                       *-->
+<!--*  Theme: default-modern                 *-->
+<!--*  Palette: blue-green                   *-->
+<!--******************************************-->
+<head xmlns:og="http://ogp.me/ns#" xmlns:book="https://ogp.me/ns/book#">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Logarithmic functions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0">
+<link href="_static/pretext/css/theme.css" rel="stylesheet" type="text/css">
+<style>
+@counter-style ptx-marker-1 { system: extends lower-alpha; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-2 { system: extends upper-alpha; prefix: ''; suffix: '. '; }
+@counter-style ptx-marker-3 { system: extends lower-roman; prefix: '('; suffix: ') '; }
+@counter-style ptx-marker-4 { system: extends lower-alpha; prefix: ''; suffix: '. '; }
+</style>
+<script type="module">import { startMathJax } from './_static/pretext/js/dist/mathjax_startup.js';
+startMathJax({
+hasWebworkReps: true,
+hasSage: false,
+isReact: false,
+htmlPresentation: false,
+lang: "en-US",
+});
+</script><script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script><meta name="Keywords" content="Authored in PreTeXt">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="book">
+<meta name="twitter:title" content="Functions and single-variable calculus: A course resource for Math 218">
+<meta property="og:title" content="Functions and single-variable calculus: A course resource for Math 218">
+<meta property="book:title" content="Functions and single-variable calculus: A course resource for Math 218">
+<meta name="twitter:description" content="A simple string (no markup is allowed) to describe your book.">
+<meta property="og:description" content="A simple string (no markup is allowed) to describe your book.">
+<meta name="twitter:card" content="summary">
+<script src="_static/pretext/js/jquery.min.js"></script><script src="_static/pretext/js/dist/pretext-core.js?v=2.52"></script><script src="_static/pretext/js/dist/pretext-read-aloud.js?v=2.52"></script><!--** eBookCongig is necessary to configure interactive       **-->
+<!--** Runestone components to run locally in reader's browser **-->
+<!--** No external communication:                              **-->
+<!--**     log level is 0, Runestone Services are disabled     **-->
+<script type="text/javascript">
+eBookConfig = {};
+eBookConfig.useRunestoneServices = false;
+eBookConfig.host = 'http://127.0.0.1:8000';
+eBookConfig.course = 'PTX_Course_Title_Here';
+eBookConfig.basecourse = 'PTX_Base_Course';
+eBookConfig.isLoggedIn = false;
+eBookConfig.email = '';
+eBookConfig.isInstructor = false;
+eBookConfig.logLevel = 0;
+eBookConfig.username = '';
+eBookConfig.readings = null;
+eBookConfig.activities = null;
+eBookConfig.downloadsEnabled = false;
+eBookConfig.allow_pairs = false;
+eBookConfig.enableScratchAC = false;
+eBookConfig.build_info = "";
+eBookConfig.python3 = null;
+eBookConfig.runestone_version = '8.2.10';
+eBookConfig.jobehost = '';
+eBookConfig.proxyuri_runs = '';
+eBookConfig.proxyuri_files = '';
+eBookConfig.enable_chatcodes =  false;
+</script>
+<!--*** Runestone Services ***-->
+<script src="_static/prefix-runtime.e3f9706509fcf6f7.bundle.js"></script><script src="_static/prefix-926.5c7038c8ef173faf.bundle.js"></script><script src="_static/prefix-runestone.c5ba0ffa5f963084.bundle.js"></script><link rel="stylesheet" type="text/css" href="_static/prefix-926.229729d09512acc9.css">
+<link rel="stylesheet" type="text/css" href="_static/prefix-runestone.efe427683fc41f98.css">
+<script src="_static/pretext/js/dist/lti_iframe_resizer.js"></script><script src="_static/pretext/js/dist/pretext-webwork.js"></script><script src="https://webwork-ptx.aimath.org/webwork2_files/node_modules/iframe-resizer/js/iframeResizer.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/lunr.js/2.3.9/lunr.min.js" integrity="sha512-4xUl/d6D6THrAnXAwGajXkoWaeMNwEKK4iNfq5DotEbLPAfk6FSxSP3ydNxqDgCw1c/0Z1Jg6L8h2j+++9BZmg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script><script src="lunr-pretext-search-index.js" async=""></script><script src="_static/pretext/js/dist/pretext_search.js"></script><!--knowl.js code controls Sage Cells within knowls--><script>sagecellEvalName='Evaluate (Sage)';
+</script>
+</head>
+<body id="changeme" class="pretext book ignore-math">
+<a class="assistive" href="#ptx-content">Skip to main content</a><header id="ptx-masthead" class="ptx-masthead" role="banner"><div class="ptx-banner"><div class="title-container">
+<div class="heading ptx-banner-heading"><a href="my-great-book.html"><span class="title">Functions and single-variable calculus</span> <span class="subtitle">A course resource for Math 218</span></a></div>
+<p class="byline">Ellen Goldstein, Aaron Greicius</p>
+</div></div></header><nav id="ptx-navbar" class="ptx-navbar navbar"><div class="ptx-navbar-contents">
+<button id="ptx-toc-toggle" type="button" aria-controls="ptx-sidebar" class="toc-toggle button" title="Contents"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d2;</span><span class="name">Contents</span></button><div class="ptx-search-box">
+<div class="ptx-search-widget"><button id="ptx-search-button" type="button" class="ptx-search-button button" title="Search Book"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe8b6;</span><span class="name">Search Book</span></button></div>
+<dialog id="ptx-search-dialog" class="ptx-dialog ptx-search-dialog"><div class="ptx-search-dialog-controls">
+<input aria-label="Search term" id="ptx-search-terms" class="ptx-search-terms" type="text" name="terms" placeholder="Search terms"><button aria-label="Close" id="ptx-search-close" class="ptx-search-close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div id="ptx-search-status" class="ptx-search-status" aria-live="polite" aria-atomic="true"></div>
+<h2 class="heading ptx-search-results-heading">Search Results: </h2>
+<div id="ptx-search-empty" class="ptx-search-empty"><span>No results.</span></div>
+<ol id="ptx-search-results" class="ptx-search-results"></ol></dialog>
+</div>
+<span class="nav-other-controls"><button id="ptx-read-aloud-button" class="ptx-read-aloud-button button" title="Read aloud" aria-expanded="false"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf1bc;</span><span class="name">Read aloud</span></button><div id="ptx-read-aloud-player" class="ptx-read-aloud-player" hidden="hidden" role="group" aria-label="Read aloud">
+<button id="ptx-read-aloud-prev" class="button" title="Previous sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe045;</span></button><button id="ptx-read-aloud-toggle" class="ptx-read-aloud-toggle button" title="Play"><span class="ptx-read-aloud-icon-play"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></span><span class="ptx-read-aloud-icon-pause"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe034;</span></span></button><button id="ptx-read-aloud-next" class="button" title="Next sentence"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe044;</span></button><a id="ptx-read-aloud-continue" class="ptx-read-aloud-continue button" hidden="hidden">Continue<span class="icon material-symbols-outlined" aria-hidden="true">&#xe037;</span></a><button id="ptx-read-aloud-settings-button" class="ptx-read-aloud-settings-button button" title="Reading settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe429;</span></button>
+</div>
+<dialog class="ptx-dialog ptx-read-aloud-settings-popup" id="ptx-read-aloud-settings-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Read aloud settings</h2>
+<button class="ptx-read-aloud-settings-close-button button" id="ptx-read-aloud-settings-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label for="ptx-read-aloud-voice"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe91f;</span><span>Voice</span></label><select id="ptx-read-aloud-voice"></select><label class="ptx-readability-slider-label" for="ptx-read-aloud-rate"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe9e4;</span><span>Reading speed</span><output id="ptx-read-aloud-rate-value" for="ptx-read-aloud-rate">1×</output></label><input type="range" id="ptx-read-aloud-rate" min="0.5" max="2" step="0.1" value="1"><label for="ptx-read-aloud-asides"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5d7;</span><span>Collapsed content</span></label><select id="ptx-read-aloud-asides"><option value="skip">Announce, do not read</option>
+<option value="read">Read automatically</option></select><label for="ptx-read-aloud-autoscroll"><input type="checkbox" id="ptx-read-aloud-autoscroll" checked><span>Follow along (auto-scroll)</span></label><label for="ptx-read-aloud-autocontinue"><input type="checkbox" id="ptx-read-aloud-autocontinue"><span>Continue to the next page automatically</span></label>
+</div></dialog><button id="ptx-readability-options-button" class="ptx-readability-options-button button" title="Readability settings"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf6f1;</span><span class="name">Readability settings</span></button><dialog class="ptx-dialog ptx-readability-options-popup" id="ptx-readability-options-popup"><div class="ptx-readability-options-popup-controls">
+<h2 class="heading">Readability settings</h2>
+<button class="ptx-readability-options-close-button button" id="ptx-readability-options-close-button" title="Close"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cd;</span></button>
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-line-height"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe240;</span><span>Line height</span><output id="ptx-readability-line-height-value" for="ptx-readability-line-height">1.35</output></label><input type="range" id="ptx-readability-line-height" min="1.10" max="3" step="0.05" value="1.35">
+</div>
+<div class="ptx-readability-options-group">
+<label class="ptx-readability-slider-label" for="ptx-readability-font-size"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe245;</span><span>Content font size</span><output id="ptx-readability-font-size-value" for="ptx-readability-font-size">100%</output></label><input type="range" id="ptx-readability-font-size" min="0.8" max="1.5" step="0.05" value="1">
+</div>
+<fieldset class="ptx-readability-options-group ptx-readability-options-group-theme">
+<legend>Theme</legend>
+<label for="ptx-readability-theme-system"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-system" value="system"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe1ab;</span><span>System</span></label><label for="ptx-readability-theme-light"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-light" value="light"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe518;</span><span>Light</span></label><label for="ptx-readability-theme-dark"><input type="radio" name="ptx-readability-theme" id="ptx-readability-theme-dark" value="dark"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe51c;</span><span>Dark</span></label>
+</fieldset>
+<fieldset class="ptx-readability-options-group">
+<legend>Assistive technologies</legend>
+<label for="ptx-readability-accessible-permalinks"><input type="checkbox" id="ptx-readability-accessible-permalinks"><span>🔗</span><span>Expose permalinks</span></label>
+</fieldset>
+<div class="ptx-readability-options-group"><button type="button" class="ptx-readability-reset-button button" id="ptx-readability-reset-button"><span class="icon material-symbols-outlined" aria-hidden="true">&#xf053;</span><span class="name">Reset All</span></button></div></dialog></span><span class="treebuttons"><a class="previous-button button" href="s_inverse_func.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="up-button button" href="ch_218-2.html" title="Up"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Up</span></a><a class="next-button button" href="s_exp_deriv.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a></span>
+</div></nav><div id="latex-macros" class="hidden-content process-math" style="display:none"><span class="process-math">\(\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z} 
+\newcommand{\Q}{\mathbb Q}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\DeclareMathOperator{\range}{range}
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\id}{id}
+\newcommand{\abs}[2][]{\left\lvert #2\right\rvert_{#1}}
+\newcommand{\anpoly}{a_nx^n+a_{n-1}x^{n-1}\cdots +a_1x+a_0}
+\newcommand{\anmonic}{x^n+a_{n-1}x^{n-1}\cdots +a_1x+a_0}
+\newcommand{\bmpoly}{b_mx^m+b_{m-1}x^{m-1}\cdots +b_1x+b_0}
+\newcommand{\bnpoly}{b_nx^n+b_{n-1}x^{n-1}\cdots +b_1x+b_0}
+\newcommand{\lt}{&lt;}
+\newcommand{\gt}{&gt;}
+\newcommand{\amp}{&amp;}
+\definecolor{fillinmathshade}{gray}{0.9}
+\newcommand{\fillinmath}[1]{\mathchoice{\colorbox{fillinmathshade}{$\displaystyle     \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\textstyle        \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptstyle      \phantom{\,#1\,}$}}{\colorbox{fillinmathshade}{$\scriptscriptstyle\phantom{\,#1\,}$}}}
+\)</span></div>
+<div class="ptx-page">
+<div id="ptx-sidebar" role="complementary" class="ptx-sidebar"><nav id="ptx-toc" tabindex="-1" aria-label="Contents" class="ptx-toc depth2 focused" data-preexpanded-levels="0" data-max-levels="2"><ul class="structural toc-item-list contains-active">
+<li class="toc-item toc-frontmatter"><div class="toc-title-box"><a href="frontmatter.html" class="internal"><span class="title">Front Matter</span></a></div></li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_intro.html" class="internal"><span class="codenumber">0</span> <span class="title">How to Learn Mathematics</span></a></div>
+<ul id="ptx-toc-group-ch_intro" class="structural toc-item-list">
+<li class="toc-item toc-introduction"><div class="toc-title-box"><a href="ch_intro-2.html" class="internal"><span class="title">Introduction</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_howtoread.html" class="internal"><span class="codenumber">0.1</span> <span class="title">How to Read Mathematics</span></a></div>
+<ul id="ptx-toc-group-sec_howtoread" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_howtoread.html#sec_howtoread-2" class="internal"><span class="title">Learning Goals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_howtoread.html#sec_howtoread-3" class="internal"><span class="title">General "Do’s" for Reading Math</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_howtoread.html#sec_defexthm" class="internal"><span class="title">Definitions, Examples, and Theorems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_howtoread.html#sec_howtoread-5" class="internal"><span class="title">Summary</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_problemsolving.html" class="internal"><span class="codenumber">0.2</span> <span class="title">How to Problem-Solve</span></a></div>
+<ul id="ptx-toc-group-sec_problemsolving" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_problemsolving.html#sec_problemsolving-3" class="internal"><span class="title">Learning Goals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_problemsolving.html#sec_problemsolving-4" class="internal"><span class="title">Why Problem Solving?</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_problemsolving.html#sec_problemsolving-5" class="internal"><span class="title">Problem-Solving Framework</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_problemsolving.html#sec_problemsolving-6" class="internal"><span class="title">Some Myths of Problem-Solving</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_problemsolving.html#sec_problemsolving-7" class="internal"><span class="title">Examples of Worked Problems</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_problemsolving.html#sec_problemsolving-8" class="internal"><span class="title">References and Notes:</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="sec_howtostudy.html" class="internal"><span class="codenumber">0.3</span> <span class="title">How to Study Math</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter">
+<div class="toc-title-box"><a href="ch_218-1.html" class="internal"><span class="codenumber">1</span> <span class="title">Math 218-1</span></a></div>
+<ul id="ptx-toc-group-ch_218-1" class="structural toc-item-list">
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_func.html" class="internal"><span class="codenumber">1.1</span> <span class="title">What is a function?</span></a></div>
+<ul id="ptx-toc-group-s_func" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_func.html#s_func-2" class="internal"><span class="title">Learning goals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_func.html#s_func-3" class="internal"><span class="title">Definition of a function</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_func.html#ss_set_notation" class="internal"><span class="title">Set-builder notation and intervals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_func.html#ss_implied_domain" class="internal"><span class="title">Implied domain and range</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_func.html#ss_graphs" class="internal"><span class="title">Tables and graphs</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_func.html#ss_vlt" class="internal"><span class="title">Vertical line test</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_func.html#ss_func_relations" class="internal"><span class="title">Functions and relations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_func.html#ss_func_model" class="internal"><span class="title">Modeling with functions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_func.html#ex_func" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_linearandquadraticfunctions.html" class="internal"><span class="codenumber">1.2</span> <span class="title">Linear and quadratic functions</span></a></div>
+<ul id="ptx-toc-group-sec_linearandquadraticfunctions" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_linearandquadraticfunctions.html#sec_linearandquadraticfunctions-3" class="internal"><span class="title">Learning Goals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_linearandquadraticfunctions.html#sec_linearandquadraticfunctions-4" class="internal"><span class="title">Definitions of linear and quadratic functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_linearandquadraticfunctions.html#subsec_propgraphs1" class="internal"><span class="title">Properties of linear functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_linearandquadraticfunctions.html#ss_quad_func_props" class="internal"><span class="title">Vertex form</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_linearandquadraticfunctions.html#exercises-" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_linearandquadraticmodeling.html" class="internal"><span class="codenumber">1.3</span> <span class="title">Modeling with Linear and Quadratic Functions</span></a></div>
+<ul id="ptx-toc-group-sec_linearandquadraticmodeling" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_linearandquadraticmodeling.html#sec_linearandquadraticmodeling-3" class="internal"><span class="title">Learning Goals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_linearandquadraticmodeling.html#sec_linearandquadraticmodeling-4" class="internal"><span class="title">The Mathematical Modeling Process</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_linearandquadraticmodeling.html#ss_avg_rate_change" class="internal"><span class="title">Average rate of change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_linearandquadraticmodeling.html#sec_linearandquadraticmodeling-6" class="internal"><span class="title">Using Linear Functions as Models</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_linearandquadraticmodeling.html#sec_linearandquadraticmodeling-7" class="internal"><span class="title">Modeling with quadratic functions: falling objects</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_linearandquadraticmodeling.html#sec_costrevenueprofit-take1" class="internal"><span class="title">Cost, Revenue, and Profit</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_linearandquadraticmodeling.html#ex_lin_quad_model" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_algebraic_func.html" class="internal"><span class="codenumber">1.4</span> <span class="title">Algebraic functions</span></a></div>
+<ul id="ptx-toc-group-sec_algebraic_func" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_algebraic_func.html#sec_algebraic_func-3" class="internal"><span class="title">Learning Goals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_algebraic_func.html#ss_power" class="internal"><span class="title">Power functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_algebraic_func.html#ss_poly" class="internal"><span class="title">Polynomial functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_algebraic_func.html#ss_rational" class="internal"><span class="title">Rational functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_algebraic_func.html#ss_alg_func" class="internal"><span class="title">Algebraic functions</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_algebraic_func.html#exs_algebraic_func" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_algebraic_func_II.html" class="internal"><span class="codenumber">1.5</span> <span class="title">Algebraic functions: continued</span></a></div>
+<ul id="ptx-toc-group-sec_algebraic_func_II" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_algebraic_func_II.html#ss_lo_alg" class="internal"><span class="title">Learning objectives</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_algebraic_func_II.html#ss_power_func_II" class="internal"><span class="title">Power functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_algebraic_func_II.html#ss_polynomials" class="internal"><span class="title">Polynomials</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_algebraic_func_II.html#ss_rational_funcs" class="internal"><span class="title">Rational functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_func_transf.html" class="internal"><span class="codenumber">1.6</span> <span class="title">Transformations and symmetry</span></a></div>
+<ul id="ptx-toc-group-sec_func_transf" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_func_transf.html#sec_func_transf-3" class="internal"><span class="title">Learning Goals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_func_transf.html#sec_func_transf-4" class="internal"><span class="title">Transformations</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_func_transf.html#sec_symmetry" class="internal"><span class="title">Symmetry</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_func_transf.html#sec_func_transf-6" class="internal"><span class="title">Vertex form of a quadratic function</span></a></div>
+<ul id="ptx-toc-group-sec_func_transf-6" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_func_transf.html#ex_transf" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_func_comp.html" class="internal"><span class="codenumber">1.7</span> <span class="title">Function composition</span></a></div>
+<ul id="ptx-toc-group-sec_func_comp" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_func_comp.html#sec_func_comp-3" class="internal"><span class="title">Learning Goals</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_func_comp.html#sec_func_comp-4" class="internal"><span class="title">Motivation and Examples</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_func_comp.html#sec_func_comp-5" class="internal"><span class="title">Function composition</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_func_comp.html#sec_func_comp-6" class="internal"><span class="title">Implied domain of compositions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_solvinginequalities.html" class="internal"><span class="codenumber">1.8</span> <span class="title">Solving inequalities</span></a></div>
+<ul id="ptx-toc-group-sec_solvinginequalities" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_solvinginequalities.html#sec_solvinginequalities-3" class="internal"><span class="title">Elementary inequality rules</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_solvinginequalities.html#sec_solvinginequalities-4" class="internal"><span class="title">Sign diagram technique</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_comp_domain.html" class="internal"><span class="codenumber">1.9</span> <span class="title">Domains of algebraic functions</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_pdfuncsandabsval.html" class="internal"><span class="codenumber">1.10</span> <span class="title">Piecewise-defined functions and absolute value</span></a></div>
+<ul id="ptx-toc-group-sec_pdfuncsandabsval" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_pdfuncsandabsval.html#sec_pdfuncsandabsval-3" class="internal"><span class="title">Piecewise-defined functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_pdfuncsandabsval.html#sec_pdfuncsandabsval-4" class="internal"><span class="title">An Application of Piecewise-defined Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_pdfuncsandabsval.html#sec_pdfuncsandabsval-5" class="internal"><span class="title">Absolute value and distance</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_pdfuncsandabsval.html#sec_pdfuncsandabsval-6" class="internal"><span class="title">Graphs of absolute values</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_limits_naive.html" class="internal"><span class="codenumber">1.11</span> <span class="title">Introduction to limits</span></a></div>
+<ul id="ptx-toc-group-s_limits_naive" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_limits_naive.html#subsec-naive-definition-of-limit" class="internal"><span class="title">Informal definition of the limit</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_limits_naive.html#ss_def" class="internal"><span class="title">One-sided limits</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_lim_rules.html" class="internal"><span class="codenumber">1.12</span> <span class="title">Limit rules</span></a></div>
+<ul id="ptx-toc-group-s_lim_rules" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_lim_rules.html#ss_limit_laws" class="internal"><span class="title">Limit rules</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lim_algebra.html" class="internal"><span class="codenumber">1.13</span> <span class="title">Limits: algebraic technique</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lim_formal.html" class="internal"><span class="codenumber">1.14</span> <span class="title">Limits: formal definition</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_continuous.html" class="internal"><span class="codenumber">1.15</span> <span class="title">Continuity</span></a></div>
+<ul id="ptx-toc-group-s_continuous" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_continuous.html#ss_cont" class="internal"><span class="title">Continuous functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_continuous.html#ss_ivt" class="internal"><span class="title">Intermediate value theorem</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_lim_at_infty.html" class="internal"><span class="codenumber">1.16</span> <span class="title">Limits at infinity</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_infinite_limits.html" class="internal"><span class="codenumber">1.17</span> <span class="title">Infinite limits</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_at_point.html" class="internal"><span class="codenumber">1.18</span> <span class="title">Derivative: at a point</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_function.html" class="internal"><span class="codenumber">1.19</span> <span class="title">Derivative: function</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_der_rules.html" class="internal"><span class="codenumber">1.20</span> <span class="title">Derivative: rules</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_der_rate_change.html" class="internal"><span class="codenumber">1.21</span> <span class="title">Derivative as rate of change</span></a></div>
+<ul id="ptx-toc-group-s_der_rate_change" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_der_rate_change.html#ss_der_rate_of" class="internal"><span class="title">Rate of change</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_der_rate_change.html#ss_dynamics" class="internal"><span class="title">Position, velocity, acceleration</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_der_rate_change.html#ss_marginal_cost" class="internal"><span class="title">Rates of change in economics</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_chain.html" class="internal"><span class="codenumber">1.22</span> <span class="title">Chain rule</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_implicit.html" class="internal"><span class="codenumber">1.23</span> <span class="title">Implicit differentiation</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_related_rates_I.html" class="internal"><span class="codenumber">1.24</span> <span class="title">Related rates I</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_related_rates_II.html" class="internal"><span class="codenumber">1.25</span> <span class="title">Related rates II</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-chapter contains-active">
+<div class="toc-title-box"><a href="ch_218-2.html" class="internal"><span class="codenumber">2</span> <span class="title">Math 218-2</span></a></div>
+<ul class="structural toc-item-list contains-active" id="ptx-toc-group-ch_218-2">
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_extreme.html" class="internal"><span class="codenumber">2.1</span> <span class="title">Extreme value theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_mean_value.html" class="internal"><span class="codenumber">2.2</span> <span class="title">Mean value theorem</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_linearize.html" class="internal"><span class="codenumber">2.3</span> <span class="title">Linearization</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_first_der_test.html" class="internal"><span class="codenumber">2.4</span> <span class="title">Monotonicity and first derivative test</span></a></div></li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_concavity.html" class="internal"><span class="codenumber">2.5</span> <span class="title">Concavity and inflection points</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_curve_sketch_I.html" class="internal"><span class="codenumber">2.6</span> <span class="title">Curve sketching</span></a></div>
+<ul id="ptx-toc-group-s_curve_sketch_I" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_curve_sketch_I.html#ss_curve_sketching" class="internal"><span class="title">Curve sketching</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_curve_sketch_I.html#ss_from_derivative" class="internal"><span class="title">Curve sketching from derivative</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_applied_opt_I.html" class="internal"><span class="codenumber">2.7</span> <span class="title">Applied optimization</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="sec_expfunctions.html" class="internal"><span class="codenumber">2.8</span> <span class="title">Exponential functions</span></a></div>
+<ul id="ptx-toc-group-sec_expfunctions" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_expfunctions.html#sec_expfunctions-3" class="internal"><span class="title">Motivating exponential functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_expfunctions.html#sec_expfunctions-4" class="internal"><span class="title">Defining Exponential Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_expfunctions.html#sec_expfunctions-5" class="internal"><span class="title">Growth of exponential Functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="sec_expfunctions.html#sec_expfunctions-6" class="internal"><span class="title">Finding Formulas for Exponential Functions</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="sec_expfunctions.html#sec_expfunctions-7" class="internal"><span class="title">Properties of Exponential Functions</span></a></div>
+<ul id="ptx-toc-group-sec_expfunctions-7" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="sec_expfunctions.html#ex_exp_func" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_exp_lim_deriv.html" class="internal"><span class="codenumber">2.9</span> <span class="title">Exponential functions: limit and graphical properties</span></a></div>
+<ul id="ptx-toc-group-s_exp_lim_deriv" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_exp_lim_deriv.html#ss_" class="internal"><span class="title">Limit properties</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_exp_lim_deriv.html#ss_exp_grap" class="internal"><span class="title">Graphing exponential functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_inverse_func.html" class="internal"><span class="codenumber">2.10</span> <span class="title">One-to-one and invertible functions</span></a></div>
+<ul id="ptx-toc-group-s_inverse_func" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_inverse_func.html#ss_invertibility" class="internal"><span class="title">One-to-one functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_inverse_func.html#ss_invertible_functions" class="internal"><span class="title">Invertible functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_inverse_func.html#ss_relating_func_inv" class="internal"><span class="title">Relating functions and their inverses</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_inverse_func.html#ex_inverse" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section contains-active">
+<div class="toc-title-box"><a href="s_log.html" class="internal"><span class="codenumber">2.11</span> <span class="title">Logarithmic functions</span></a></div>
+<ul class="structural toc-item-list active" id="ptx-toc-group-s_log">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_log.html#ss_log_def_alg" class="internal"><span class="title">Definition and algebraic properties</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_log.html#ss_log_graph" class="internal"><span class="title">Graphical properties</span></a></div></li>
+<li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_log.html#ex_log" class="internal"><span class="title">Exercises</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_exp_deriv.html" class="internal"><span class="codenumber">2.12</span> <span class="title">Exponential derivatives</span></a></div>
+<ul id="ptx-toc-group-s_exp_deriv" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_exp_deriv.html#ss_derivative" class="internal"><span class="title">The natural exponential function and its derivative</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="s_exp_deriv.html#ss_exp_der_gen" class="internal"><span class="title">General derivative formula for <span class="process-math">\(\)</span></span></a></div>
+<ul id="ptx-toc-group-ss_exp_der_gen" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_exp_deriv.html#ex_exp_der" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_log_deriv.html" class="internal"><span class="codenumber">2.13</span> <span class="title">Derivative of logarithmic functions</span></a></div>
+<ul id="ptx-toc-group-s_log_deriv" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_log_deriv.html#ss_log_der" class="internal"><span class="title">Derivative of inverse functions</span></a></div></li>
+<li class="toc-item toc-subsection">
+<div class="toc-title-box"><a href="s_log_deriv.html#ss_der_log" class="internal"><span class="title">Derivative formula for logarithmic functions</span></a></div>
+<ul id="ptx-toc-group-ss_der_log" class="structural toc-item-list"><li class="toc-item toc-exercises"><div class="toc-title-box"><a href="s_log_deriv.html#ex_log_der" class="internal"><span class="title">Exercises</span></a></div></li></ul>
+</li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_exp_log_sketch.html" class="internal"><span class="codenumber">2.14</span> <span class="title">Exponential and logarithmic curve sketching</span></a></div>
+<ul id="ptx-toc-group-s_exp_log_sketch" class="structural toc-item-list"><li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_exp_log_sketch.html#ss_exp_log_curve_sketching" class="internal"><span class="title">Curve sketching</span></a></div></li></ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_lHop_A.html" class="internal"><span class="codenumber">2.15</span> <span class="title">L’Hôpital’s rule</span></a></div>
+<ul id="ptx-toc-group-s_lHop_A" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_lHop_A.html#ss_indeterminate_forms" class="internal"><span class="title">Indeterminate forms <span class="process-math">\(0/0\)</span> and <span class="process-math">\(\infty/\infty\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_lHop_A.html#ss_lHop" class="internal"><span class="title">L’Hôpital’s rule</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_lHop_A.html#ss_other_indeterminate_forms" class="internal"><span class="title">Other indetermiante forms</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_unit_circle_trig.html" class="internal"><span class="codenumber">2.16</span> <span class="title">Trigonometric functions via the unit circle</span></a></div>
+<ul id="ptx-toc-group-s_unit_circle_trig" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_unit_circle_trig.html#s_unit_circle_trig-3" class="internal"><span class="title">Functions defined by circular motion</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_unit_circle_trig.html#sec_theunitcircle" class="internal"><span class="title">The unit circle</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_unit_circle_trig.html#s_unit_circle_trig-5" class="internal"><span class="title">The sine and cosine functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_trig_computing.html" class="internal"><span class="codenumber">2.17</span> <span class="title">Computing with trigonometric functions</span></a></div>
+<ul id="ptx-toc-group-s_trig_computing" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_trig_computing.html#s_trig_computing-3" class="internal"><span class="title">Side lengths of two special right triangles</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_trig_computing.html#s_trig_computing-4" class="internal"><span class="title">Computing with angles <span class="process-math">\(\theta\)</span> outside of <span class="process-math">\([0,2\pi]\)</span></span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_trig_prop.html" class="internal"><span class="codenumber">2.18</span> <span class="title">Trigonometric functions: properties</span></a></div>
+<ul id="ptx-toc-group-s_trig_prop" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_trig_prop.html#ss_props_cos_sine" class="internal"><span class="title">Properties of <span class="process-math">\(\cos\)</span> and <span class="process-math">\(\sin\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_trig_prop.html#ss_graph_sin_cos" class="internal"><span class="title">Graphs of <span class="process-math">\(\cos\)</span> and <span class="process-math">\(\sin\)</span></span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_trig_prop.html#ss_six_trig_functions" class="internal"><span class="title">The six trigonometric functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_trig_solve.html" class="internal"><span class="codenumber">2.19</span> <span class="title">Solving trigonometric equations</span></a></div></li>
+<li class="toc-item toc-section">
+<div class="toc-title-box"><a href="s_trig_calculus.html" class="internal"><span class="codenumber">2.20</span> <span class="title">Squeeze theorem and the calculus of trigonometric functions</span></a></div>
+<ul id="ptx-toc-group-s_trig_calculus" class="structural toc-item-list">
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_trig_calculus.html#ss_squeeze_theorem" class="internal"><span class="title">Squeeze theorem</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_trig_calculus.html#ss_continuity_trig" class="internal"><span class="title">Continuity of trigonometric functions</span></a></div></li>
+<li class="toc-item toc-subsection"><div class="toc-title-box"><a href="s_trig_calculus.html#ss_trig_der" class="internal"><span class="title">Trigonometric derivatives</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-section"><div class="toc-title-box"><a href="s_inverse_trig.html" class="internal"><span class="codenumber">2.21</span> <span class="title">Inverse trigonometric functions</span></a></div></li>
+</ul>
+</li>
+<li class="toc-item toc-backmatter">
+<div class="toc-title-box"><a href="backmatter.html" class="internal"><span class="title">Backmatter</span></a></div>
+<ul id="ptx-toc-group-backmatter" class="structural toc-item-list">
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-notation.html" class="internal"><span class="codenumber">A.</span> <span class="title">Notation</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-defs.html" class="internal"><span class="codenumber">B.</span> <span class="title">Definitions</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-thms.html" class="internal"><span class="codenumber">C.</span> <span class="title">Theory</span></a></div></li>
+<li class="toc-item toc-appendix"><div class="toc-title-box"><a href="appendix-egs.html" class="internal"><span class="codenumber">D.</span> <span class="title">Examples</span></a></div></li>
+<li class="toc-item toc-colophon"><div class="toc-title-box"><a href="backmatter-6.html" class="internal"><span class="title">Colophon</span></a></div></li>
+</ul>
+</li>
+</ul></nav></div>
+<main class="ptx-main"><div id="ptx-content" class="ptx-content">
+<section class="section" id="s_log">
+<h1 class="heading hide-type">
+<span class="type">Section</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.11</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Logarithmic functions</span>
+</h1>
+<article class="objectives goal-like" id="s_log-2"><h2 class="heading"><span class="type">Objectives</span></h2>
+<ul class="disc" id="s_log-2-1">
+<li id="s_log-2-1-1">
+<div class="para" id="s_log-2-1-1-1">Define logarithms as the inverses of exponential functions.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_log-2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Objective"><a tabindex="-1" href="#s_log-2-1-1" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="s_log-2-1-2">
+<div class="para" id="s_log-2-1-2-1">Combine properties of inverse functions and exponential functions to develop properties of logarithmic functions.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_log-2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Objective"><a tabindex="-1" href="#s_log-2-1-2" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="s_log-2-1-3">
+<div class="para" id="s_log-2-1-3-1">Recognize key features of graphs of logarithmic functions, including domain, range, and <span class="process-math">\(x\)</span>-intercept.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_log-2-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Objective"><a tabindex="-1" href="#s_log-2-1-3" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="s_log-2-1-4">
+<div class="para" id="s_log-2-1-4-1">Establish important algebraic properties of logarithms.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_log-2-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Objective"><a tabindex="-1" href="#s_log-2-1-4" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+<li id="s_log-2-1-5">
+<div class="para" id="s_log-2-1-5-1">Solve equations involving exponential and logarithmic functions.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#s_log-2-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Objective"><a tabindex="-1" href="#s_log-2-1-5" title="Copy heading and permalink for Objective" aria-label="Copy heading and permalink for Objective">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Objectives 2.11"><a tabindex="-1" href="#s_log-2" title="Copy heading and permalink for Objectives 2.11" aria-label="Copy heading and permalink for Objectives 2.11">🔗</a></div>
+</article>
+<section class="subsection" id="ss_log_def_alg">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Definition and algebraic properties</span>
+</h2>
+<div class="para" id="ss_log_def_alg-2">We observed in the previous section that exponential functions are one-to-one (in fact, monotonic), and hence invertible; and in <a href="s_inverse_func.html#eg_inverse_exp" class="xref" data-knowl="./knowl/xref/eg_inverse_exp.html" data-reveal-label="Reveal" data-close-label="Close" title="Example 2.10.26: Inverse of exponential function">Example 2.10.26</a> we illustrated how properties of exponential functions <span class="process-math">\(f(x)=b^x\)</span> (specifically graphical properties) can be translated directly to those of their inverse function <span class="process-math">\(f^{-1}\text{.}\)</span> Those inverse functions turn out to be important enough to warrant their own name: <em class="emphasis">logarithimic functions</em>.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ss_log_def_alg-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="d_log"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.11.1</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Logarithmic functions.</span>
+</h3>
+<div class="para logical" id="d_log-3-1">
+<div class="para">Let <span class="process-math">\(b\)</span> be a positive real number. The <dfn class="terminology">logarithmic function with base <span class="process-math">\(b\)</span></dfn> (or <dfn class="terminology">base-<span class="process-math">\(b\)</span> logarithmic function</dfn>) is the function</div>
+<div class="displaymath process-math" id="d_log-3-1-4">
+\begin{align*}
+\log_b\colon (0,\infty) \amp \rightarrow \R
+\end{align*}
+</div>
+<div class="para">defined as the inverse of the exponential function <span class="process-math">\(f(x)=b^x\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#d_log-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 2.11.1: Logarithmic functions"><a tabindex="-1" href="#d_log" title="Copy heading and permalink for Definition 2.11.1: Logarithmic functions" aria-label="Copy heading and permalink for Definition 2.11.1: Logarithmic functions">🔗</a></div>
+</article>
+<div class="para" id="ss_log_def_alg-4">This method of defining a new function as the inverse of an existing one, is sometimes off-putting to students. We are accustomed to functions being defined via an explicit formula that allows us to compute its values directly. Note that this is not the case with our definition of logarithmic functions. We do not give you a formula for computing <span class="process-math">\(\log_b(x)\)</span> for a given <span class="process-math">\(x\text{;}\)</span> instead, we simply describe <span class="process-math">\(\log_b\)</span> as the inverse function of the exponential function <span class="process-math">\(f(x)=b^x\text{.}\)</span> So how do we deal with functions thus defined? The key is to use the many linked properties of a function <span class="process-math">\(f\)</span> and its inverse <span class="process-math">\(f^{-1}\text{,}\)</span> as articulated in <a href="s_inverse_func.html#th_inverse_function" class="xref" data-knowl="./knowl/xref/th_inverse_function.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.10.25: Inverse function compendium">Theorem 2.10.25</a>. The next theorem does just that, building on the various properties of exponential functions established in <a href="sec_expfunctions.html#th_exp_func_props" class="xref" data-knowl="./knowl/xref/th_exp_func_props.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.8.21: Properties of exponential functions">Theorem 2.8.21</a>. Statement (1) of the theorem is a direct applications of equations <a href="s_inverse_func.html#d_invertible-2-1-4" class="xref" data-knowl="./knowl/xref/eq_inverse_left.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.24">(2.24)</a>, <a href="s_inverse_func.html#d_invertible-2-1-4" class="xref" data-knowl="./knowl/xref/eq_inverse_right.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.25">(2.25)</a>, and <a href="s_inverse_func.html#th_inverse_function-2-1-2-1-1-2" class="xref" data-knowl="./knowl/xref/eq_f_finv.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.29">(2.29)</a> to the special case of <span class="process-math">\(f(x)=b^x\)</span> and <span class="process-math">\(f^{-1}(x)=\log_b x\text{.}\)</span> The properties of (2) follow from complementary properties of the exponential function essentially by reversing the roles of input and output.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ss_log_def_alg-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="th_log_props"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.11.2</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Logarithm properties: algebraic.</span>
+</h3>
+<div class="para logical" id="th_log_props-2-1">
+<div class="para">Let <span class="process-math">\(b\)</span> be a positive real number.</div>
+<ol class="decimal" id="th_log_props-2-1-2">
+<li id="th_log_props-2-1-2-1">
+<span class="heading li--heading"><span class="title li--heading-title">Inverse identities.</span></span>
+<div class="para logical" id="th_log_props-2-1-2-1-2">
+<div class="para">We have</div>
+<div class="displaymath process-math" id="th_log_props-2-1-2-1-2-1">
+\begin{align}
+\log_b(r)=s \amp \text{ if and only if } b^s=r\tag{2.32}\\
+\log_b(b^s) \amp =s \tag{2.33}\\
+b^{\log_b(r)} \amp =r \tag{2.34}
+\end{align}
+</div>
+<div class="para">for all <span class="process-math">\(r\in (0,\infty)\)</span> and <span class="process-math">\(s\in \R\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#th_log_props-2-1-2-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1: Inverse identities"><a tabindex="-1" href="#th_log_props-2-1-2-1" title="Copy heading and permalink for Item 1: Inverse identities" aria-label="Copy heading and permalink for Item 1: Inverse identities">🔗</a></div>
+</li>
+<li id="th_log_props-2-1-2-2">
+<span class="heading li--heading"><span class="title li--heading-title">Algebraic identities.</span></span>
+<div class="para logical" id="th_log_props-2-1-2-2-2">
+<div class="para">We have</div>
+<div class="displaymath process-math" id="th_log_props-2-1-2-2-2-1">
+\begin{align}
+\log_b(rs) \amp =\log_b(r)+\log_b(s) \tag{2.35}\\
+\log_b(r/s) \amp =\log_b(r)-\log_b(s)\tag{2.36}\\
+\log_b(1/s) \amp = -\log_b(s)\tag{2.37}\\
+\log_b(r^c) \amp = c\log_b(r) \tag{2.38}
+\end{align}
+</div>
+<div class="para">for all <span class="process-math">\(r,s\in (0,\infty)\)</span> and <span class="process-math">\(c\in \R\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#th_log_props-2-1-2-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2: Algebraic identities"><a tabindex="-1" href="#th_log_props-2-1-2-2" title="Copy heading and permalink for Item 2: Algebraic identities" aria-label="Copy heading and permalink for Item 2: Algebraic identities">🔗</a></div>
+</li>
+<li id="th_log_props-2-1-2-3">
+<span class="heading li--heading"><span class="title li--heading-title">Change of base identity.</span></span>
+<div class="para logical" id="th_log_props-2-1-2-3-2">
+<div class="para">Let <span class="process-math">\(c\)</span> be another positive real number. We have</div>
+<div class="displaymath process-math" id="th_log_props-2-1-2-3-2-2">
+\begin{align}
+\log_c x \amp = \frac{\log_b x}{\log_b c} \text{.}\tag{2.39}
+\end{align}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#th_log_props-2-1-2-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3: Change of base identity"><a tabindex="-1" href="#th_log_props-2-1-2-3" title="Copy heading and permalink for Item 3: Change of base identity" aria-label="Copy heading and permalink for Item 3: Change of base identity">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#th_log_props-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 2.11.2: Logarithm properties: algebraic"><a tabindex="-1" href="#th_log_props" title="Copy heading and permalink for Theorem 2.11.2: Logarithm properties: algebraic" aria-label="Copy heading and permalink for Theorem 2.11.2: Logarithm properties: algebraic">🔗</a></div>
+</article>
+<div class="para" id="ss_log_def_alg-6">The equivalence <a href="s_log.html#th_log_props-2-1-2-1-2-1" class="xref" data-knowl="./knowl/xref/eq_log_exp_equiv.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.32">(2.32)</a> is our main tool for computing actual values of <span class="process-math">\(\log_b\text{.}\)</span> Let’s see how this works with an example.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ss_log_def_alg-6" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="eg_log_compute"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.11.3</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Computing logarithmic values.</span>
+</h3>
+<div class="para logical" id="eg_log_compute-2-1">
+<div class="para">Use the equivalence <a href="s_log.html#th_log_props-2-1-2-1-2-1" class="xref" data-knowl="./knowl/xref/eq_log_exp_equiv.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.32">(2.32)</a> to compute the given logarithmic expression without using technology.</div>
+<ol class="decimal" id="eg_log_compute-2-1-2">
+<li id="eg_log_compute-2-1-2-1">
+<div class="para" id="eg_log_compute-2-1-2-1-1">
+<span class="process-math">\(\displaystyle \log_2(32)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_log_compute-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#eg_log_compute-2-1-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="eg_log_compute-2-1-2-2">
+<div class="para" id="eg_log_compute-2-1-2-2-1">
+<span class="process-math">\(\displaystyle \log_3(1/9)\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_log_compute-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#eg_log_compute-2-1-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="eg_log_compute-2-1-2-3">
+<div class="para" id="eg_log_compute-2-1-2-3-1">
+<span class="process-math">\(\displaystyle \log_{1/5}(\sqrt{5})\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_log_compute-2-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#eg_log_compute-2-1-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_log_compute-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="eg_log_compute-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="eg_log_compute-3-1">
+<ol class="decimal" id="eg_log_compute-3-1-1">
+<li id="eg_log_compute-3-1-1-1">
+<div class="para" id="eg_log_compute-3-1-1-1-1">According to <a href="s_log.html#th_log_props-2-1-2-1-2-1" class="xref" data-knowl="./knowl/xref/eq_log_exp_equiv.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.32">(2.32)</a>, we have <span class="process-math">\(\log_2(32)=s\)</span> if and only if <span class="process-math">\(2^s=32\text{.}\)</span> Since <span class="process-math">\(32=2^{5}\text{,}\)</span> we conclude that <span class="process-math">\(\log_2 32=5\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_log_compute-3-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#eg_log_compute-3-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="eg_log_compute-3-1-1-2">
+<div class="para" id="eg_log_compute-3-1-1-2-1">Similarly, <span class="process-math">\(\log_3(1/9)\)</span> is the number <span class="process-math">\(s\)</span> satisfying <span class="process-math">\(3^s=1/9\text{.}\)</span> Since <span class="process-math">\(1/9=1/3^2=3^{-2}\text{,}\)</span> we see that <span class="process-math">\(\log_3(1/9)=-2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_log_compute-3-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#eg_log_compute-3-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="eg_log_compute-3-1-1-3">
+<div class="para" id="eg_log_compute-3-1-1-3-1">We have <span class="process-math">\(\sqrt{5}=5^{1/2}=(5^{-1})^{-1/2}=(1/5)^{-1/2}\text{.}\)</span> Equivalently, using <a href="s_log.html#th_log_props-2-1-2-1-2-1" class="xref" data-knowl="./knowl/xref/eq_log_exp_equiv.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.32">(2.32)</a>, we see that <span class="process-math">\(\log_{1/5}(\sqrt{5})=-1/2\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_log_compute-3-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#eg_log_compute-3-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_log_compute-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 2.11.3.1"><a tabindex="-1" href="#eg_log_compute-3" title="Copy heading and permalink for Solution 2.11.3.1" aria-label="Copy heading and permalink for Solution 2.11.3.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 2.11.3: Computing logarithmic values"><a tabindex="-1" href="#eg_log_compute" title="Copy heading and permalink for Example 2.11.3: Computing logarithmic values" aria-label="Copy heading and permalink for Example 2.11.3: Computing logarithmic values">🔗</a></div>
+</article>
+<div class="para" id="ss_log_def_alg-8">The identities <a href="s_log.html#th_log_props-2-1-2-2-2-1" class="xref" data-knowl="./knowl/xref/eq_log_prod.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.35">(2.35)–(2.38)</a> can be used to simplify logarithmic expressions, as the next example illustrates.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ss_log_def_alg-8" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="eg_log_simplify"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.11.4</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Simplifying logarithmic expressions.</span>
+</h3>
+<div class="para logical" id="eg_log_simplify-2-1">
+<div class="para">Use the identities <a href="s_log.html#th_log_props-2-1-2-2-2-1" class="xref" data-knowl="./knowl/xref/eq_log_prod.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.35">(2.35)–(2.38)</a> to help compute the following logarithmic expressions without using technology.</div>
+<ol class="decimal" id="eg_log_simplify-2-1-2">
+<li id="eg_log_simplify-2-1-2-1">
+<div class="para" id="eg_log_simplify-2-1-2-1-1">
+<span class="process-math">\(\displaystyle \log_{10}2+\log_{10}50\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_log_simplify-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#eg_log_simplify-2-1-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="eg_log_simplify-2-1-2-2">
+<div class="para" id="eg_log_simplify-2-1-2-2-1">
+<span class="process-math">\(\displaystyle 2\log_3 6-\log_3 4\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_log_simplify-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#eg_log_simplify-2-1-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_log_simplify-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="eg_log_simplify-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="eg_log_simplify-3-1">
+<ol class="decimal" id="eg_log_simplify-3-1-1">
+<li id="eg_log_simplify-3-1-1-1">
+<div class="para logical" id="eg_log_simplify-3-1-1-1-1">
+<div class="para">We have</div>
+<div class="displaymath process-math" id="eg_log_simplify-3-1-1-1-1-1">
+\begin{align*}
+\log_{10}2+\log_{10}50 \amp =\log_{10}(2\cdot 50)\\
+\amp = \log_{10} 100\\
+\amp = 2\text{,}
+\end{align*}
+</div>
+<div class="para">since <span class="process-math">\(100=10^2\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_log_simplify-3-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#eg_log_simplify-3-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="eg_log_simplify-3-1-1-2">
+<div class="para logical" id="eg_log_simplify-3-1-1-2-1">
+<div class="para">We have</div>
+<div class="displaymath process-math" id="eg_log_simplify-3-1-1-2-1-1">
+\begin{align*}
+2\log_3 6-\log_3 4 \amp = \log_3 6^2-\log_3 4\\
+\amp = \log_3(6^2/4)\\
+\amp = \log_3( 3^2)\\
+\amp =2\text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_log_simplify-3-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#eg_log_simplify-3-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_log_simplify-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 2.11.4.1"><a tabindex="-1" href="#eg_log_simplify-3" title="Copy heading and permalink for Solution 2.11.4.1" aria-label="Copy heading and permalink for Solution 2.11.4.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 2.11.4: Simplifying logarithmic expressions"><a tabindex="-1" href="#eg_log_simplify" title="Copy heading and permalink for Example 2.11.4: Simplifying logarithmic expressions" aria-label="Copy heading and permalink for Example 2.11.4: Simplifying logarithmic expressions">🔗</a></div>
+</article>
+<div class="para" id="ss_log_def_alg-10">Continuing in our algebraic vein, we can use the identities <a href="s_log.html#th_log_props-2-1-2-1-2-1" class="xref" data-knowl="./knowl/xref/eq_log_exp_equiv.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.32">(2.32)–(2.34)</a> to solve equations involving logarithmic or exponential functions.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ss_log_def_alg-10" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="eg_log_exp_solve"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.11.5</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exponential and logarithmic equations.</span>
+</h3>
+<div class="para logical" id="eg_log_exp_solve-2-1">
+<div class="para">Solve the given equation using the inverse identities <a href="s_log.html#th_log_props-2-1-2-1-2-1" class="xref" data-knowl="./knowl/xref/eq_log_exp_equiv.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.32">(2.32)–(2.34)</a>. If possible, express your answer as a rational number. Otherwise, you may leave the answer in terms of logarithmic or exponential functions.</div>
+<ol class="decimal" id="eg_log_exp_solve-2-1-2">
+<li id="eg_log_exp_solve-2-1-2-1">
+<div class="para" id="eg_log_exp_solve-2-1-2-1-1">
+<span class="process-math">\(\displaystyle 2^x=129\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_log_exp_solve-2-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#eg_log_exp_solve-2-1-2-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="eg_log_exp_solve-2-1-2-2">
+<div class="para" id="eg_log_exp_solve-2-1-2-2-1">
+<span class="process-math">\(\displaystyle 3^x=9^{2x-1}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_log_exp_solve-2-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#eg_log_exp_solve-2-1-2-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="eg_log_exp_solve-2-1-2-3">
+<div class="para" id="eg_log_exp_solve-2-1-2-3-1">
+<span class="process-math">\(\displaystyle 2^{3x}=16^{1-x}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_log_exp_solve-2-1-2-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#eg_log_exp_solve-2-1-2-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="eg_log_exp_solve-2-1-2-4">
+<div class="para" id="eg_log_exp_solve-2-1-2-4-1">
+<span class="process-math">\(\displaystyle 9\cdot 3^x=7^{2x}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_log_exp_solve-2-1-2-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4"><a tabindex="-1" href="#eg_log_exp_solve-2-1-2-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="eg_log_exp_solve-2-1-2-5">
+<div class="para" id="eg_log_exp_solve-2-1-2-5-1">
+<span class="process-math">\(\displaystyle \log_3(x+5)+6=10\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_log_exp_solve-2-1-2-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 5"><a tabindex="-1" href="#eg_log_exp_solve-2-1-2-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li id="eg_log_exp_solve-2-1-2-6">
+<div class="para" id="eg_log_exp_solve-2-1-2-6-1">
+<span class="process-math">\(\displaystyle 1+2\log_4(x+1)=2\log_2 x\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_log_exp_solve-2-1-2-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6"><a tabindex="-1" href="#eg_log_exp_solve-2-1-2-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_log_exp_solve-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="eg_log_exp_solve-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="eg_log_exp_solve-3-1">
+<ol class="decimal" id="eg_log_exp_solve-3-1-1">
+<li id="eg_log_exp_solve-3-1-1-1">
+<div class="para logical" id="eg_log_exp_solve-3-1-1-1-1">
+<div class="para">Since do not recognize 129 as a rational power of <span class="process-math">\(2\text{,}\)</span> our answer will be expressed in terms of logarithms. For the sake of illustration, we will solve in two different ways, using <span class="process-math">\(\log_2\)</span> and <span class="process-math">\(\log_{10}\text{,}\)</span> respectively. Using <span class="process-math">\(\log_2\text{,}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_log_right_inv.html ./knowl/xref/eq_log_power.html ./knowl/xref/eq_log_change_base.html" id="eg_log_exp_solve-3-1-1-1-1-5">
+\begin{align*}
+2^x \amp =129\\
+\log_2(2^x) \amp =\log_2(129) \\
+x \amp =\log_2(129) \amp \knowl{./knowl/xref/eq_log_right_inv.html}{\text{(2.33)}}\text{.}
+\end{align*}
+</div>
+<div class="para">Using <span class="process-math">\(\log_{10}\text{,}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_log_right_inv.html ./knowl/xref/eq_log_power.html ./knowl/xref/eq_log_change_base.html" id="eg_log_exp_solve-3-1-1-1-1-7">
+\begin{align*}
+2^x \amp = 129\\
+\log_{10}(2^x) \amp =\log_{10}129\\
+x\log_{10} 2 \amp = \log_{10} 129 \amp \knowl{./knowl/xref/eq_log_power.html}{\text{(2.38)}}\\
+x \amp = \frac{\log_{10}129}{\log_{10}2}\text{.}
+\end{align*}
+</div>
+<div class="para">Interestingly, our different approaches yield very different looking answers. The change of base identity <a href="s_log.html#th_log_props-2-1-2-3-2-2" class="xref" data-knowl="./knowl/xref/eq_log_change_base.html" data-reveal-label="Reveal" data-close-label="Close" title="Equation 2.39">(2.39)</a> reveals that the two answers are equal. Indeed, taking <span class="process-math">\(c=2\)</span> and <span class="process-math">\(b=10\)</span> in that identity, we see that</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_log_right_inv.html ./knowl/xref/eq_log_power.html ./knowl/xref/eq_log_change_base.html" id="eg_log_exp_solve-3-1-1-1-1-11">
+\begin{align*}
+\log_2 129 \amp =\frac{\log_{10} 129}{\log_{10} 2}\text{.}
+\end{align*}
+</div>
+<div class="para">Note that <span class="process-math">\(\log_2\)</span> was a natural choice of base here since the original exponential equation involved the base <span class="process-math">\(2\text{;}\)</span> and indeed, using <span class="process-math">\(\log_2\)</span> instead of <span class="process-math">\(\log_{10}\)</span> saved us a step in our solution.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_log_exp_solve-3-1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#eg_log_exp_solve-3-1-1-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="eg_log_exp_solve-3-1-1-2">
+<div class="para logical" id="eg_log_exp_solve-3-1-1-2-1">
+<div class="para">We have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_log_right_inv.html" id="eg_log_exp_solve-3-1-1-2-1-1">
+\begin{align*}
+3^x \amp =9^{2x-1} \\
+3^x \amp =(3^2)^{2x-1} \\
+3^x \amp =3^{4x-2} \\
+\log_3(3^x) \amp = \log_3(3^{4x-2})\\
+x \amp = 4x-2 \amp \knowl{./knowl/xref/eq_log_right_inv.html}{\text{(2.33)}}\\
+-3x \amp = -2 \\
+x \amp = \frac{2}{3} \text{.}
+\end{align*}
+</div>
+<div class="para">Note that instead of taking logarithms of both sides to get to the equation <span class="process-math">\(x=4x-2\text{,}\)</span> we could have instead gone directly from <span class="process-math">\(3^x=3^{4x-2}\)</span> to <span class="process-math">\(x=4x-2\text{.}\)</span> This “equating exponents” rule, when the base is equal, follows from the one-to-one property of exponential functions. In general, we have <span class="process-math">\(b^x=b^y\)</span> if and only if <span class="process-math">\(x=y\text{.}\)</span> Feel free to use this shortcut in your algebra.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_log_exp_solve-3-1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#eg_log_exp_solve-3-1-1-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="eg_log_exp_solve-3-1-1-3">
+<div class="para logical" id="eg_log_exp_solve-3-1-1-3-1">
+<div class="para">We have</div>
+<div class="displaymath process-math" id="eg_log_exp_solve-3-1-1-3-1-1">
+\begin{align*}
+2^{3x} \amp =16^{1-x} \\
+2^{3x} \amp =(2^4)^{1-x} \\
+2^{3x} \amp =2^{4-4x} \\
+3x \amp = 4-4x \amp (2^a=2^b \iff a=b)\\
+7x \amp =4 \\
+x \amp =\frac{4}{7} \text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_log_exp_solve-3-1-1-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#eg_log_exp_solve-3-1-1-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="eg_log_exp_solve-3-1-1-4">
+<div class="para logical" id="eg_log_exp_solve-3-1-1-4-1">
+<div class="para">We have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_log_right_inv.html ./knowl/xref/eq_log_power.html" id="eg_log_exp_solve-3-1-1-4-1-1">
+\begin{align*}
+9\cdot 3^x \amp =7^{2x} \\
+3^2\cdot 3^x \amp =7^{2x} \\
+3^{x+2} \amp =7^{2x} \\
+\log_3(3^{x+2}) \amp =\log_3(7^{2x}) \\
+x+2 \amp = 2x\log_3 7 \amp \knowl{./knowl/xref/eq_log_right_inv.html}{\text{(2.33)}}, \knowl{./knowl/xref/eq_log_power.html}{\text{(2.38)}}\\
+2 \amp = x(2\log_3 7 -1) \\
+x \amp = \frac{2}{2\log_3 7 -1} \text{.}
+\end{align*}
+</div>
+<div class="para">Note how the two distinct bases <span class="process-math">\(3\)</span> and <span class="process-math">\(7\)</span> in this case prevented from expressing our answer in a simpler form.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_log_exp_solve-3-1-1-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4"><a tabindex="-1" href="#eg_log_exp_solve-3-1-1-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="eg_log_exp_solve-3-1-1-5">
+<div class="para logical" id="eg_log_exp_solve-3-1-1-5-1">
+<div class="para">We have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_exp_right_inv.html" id="eg_log_exp_solve-3-1-1-5-1-1">
+\begin{align*}
+\log_3(x+5)+6 \amp =10 \\
+\log_3(x+5) \amp =4 \\
+3^{\log_3(x+5)} \amp =3^4 \\
+x+5 \amp =81 \amp \knowl{./knowl/xref/eq_exp_right_inv.html}{\text{(2.34)}} \\
+x \amp =76 \text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_log_exp_solve-3-1-1-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 5"><a tabindex="-1" href="#eg_log_exp_solve-3-1-1-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+<li id="eg_log_exp_solve-3-1-1-6">
+<div class="para logical" id="eg_log_exp_solve-3-1-1-6-1">
+<div class="para">Since the logarithmic functions use different bases here, in order to get somewhere with our algebra, we will want to use a change of base formula. Taking <span class="process-math">\(b=4\)</span> and <span class="process-math">\(c=2\text{,}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_log_change_base.html" id="eg_log_exp_solve-3-1-1-6-1-3">
+\begin{align*}
+\log_4 a \amp =\frac{\log_2 a}{\log_2 4}\\
+\amp =\frac{\log_2 a}{2}\text{,}
+\end{align*}
+</div>
+<div class="para">since <span class="process-math">\(4=2^2\text{.}\)</span> We now solve:</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/eq_log_change_base.html" id="eg_log_exp_solve-3-1-1-6-1-5">
+\begin{align*}
+1+2\log_4(x+1) \amp = 2\log_2 x \\
+1+2\cdot \frac{\log_2(x+1)}{2} \amp = 2\log_2 x \amp \knowl{./knowl/xref/eq_log_change_base.html}{\text{(2.39)}} \\
+1+\log_2(x+1) \amp = 2\log_2 x \\
+1 \amp =\log_2(x^2)-\log_2(x+1)\\
+1 \amp = \log_2(x^2/(x+1))\\
+2^1 \amp =2^{\log_2(x^2/(x+1))}\\
+2 \amp =x^2/(x+1)\\
+2(x+1) \amp = x^2 \\
+0 \amp = x^2-2x-2 \\
+x \amp = \frac{2\pm \sqrt{(-2)^2-4\cdot 1 \cdot (-2)}}{2\cdot 1} \amp \\
+x \amp = 1\pm \sqrt{3} \text{.}
+\end{align*}
+</div>
+<div class="para">Since <span class="process-math">\(1-\sqrt{3}&lt;0\text{,}\)</span> and the domain of logarithmic functions is <span class="process-math">\((0,\infty)\text{,}\)</span> we discard this solution. Thus <span class="process-math">\(x=1+\sqrt{3}\)</span> is the only solution to the equation.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_log_exp_solve-3-1-1-6-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 6"><a tabindex="-1" href="#eg_log_exp_solve-3-1-1-6" title="Copy heading and permalink for Item 6" aria-label="Copy heading and permalink for Item 6">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_log_exp_solve-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 2.11.5.1"><a tabindex="-1" href="#eg_log_exp_solve-3" title="Copy heading and permalink for Solution 2.11.5.1" aria-label="Copy heading and permalink for Solution 2.11.5.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 2.11.5: Exponential and logarithmic equations"><a tabindex="-1" href="#eg_log_exp_solve" title="Copy heading and permalink for Example 2.11.5: Exponential and logarithmic equations" aria-label="Copy heading and permalink for Example 2.11.5: Exponential and logarithmic equations">🔗</a></div>
+</article>
+<div class="para logical" id="ss_log_def_alg-12">
+<div class="para">Before moving on to graphical properties of logarithmic functions, we consider the special case of the base-<span class="process-math">\(10\)</span> logarithm <span class="process-math">\(\log_{10}\text{.}\)</span> This logarithm appears fairly frequently in applications, mainly due to our favoring a base-10 (or decimal) number system. A useful manner of understanding <span class="process-math">\(\log_{10} x\)</span> is as a measure of the length of the decimal expansion of <span class="process-math">\(x\text{.}\)</span> This is made clear by looking at some simple examples:</div>
+<div class="displaymath process-math" id="ss_log_def_alg-12-5">
+\begin{align*}
+\log_{10} 10 \amp =\log_{10} 10^1=1 \\
+\log_{10}100 \amp = \log_{10}10^2=2 \\
+\log_{10}1000 \amp =\log_{10}10^3=3 \\
+\log_{10}10000 \amp =\log_{10}10^4=4 \\
+\log_{10}1\underset{ n \text{ zeros}}{\underbrace{00\dots 0}}\amp =\log_{10}10^n=n \amp \text{.}
+\end{align*}
+</div>
+<div class="para">We see that for powers of <span class="process-math">\(10\text{,}\)</span> the base-10 logarithm <span class="process-math">\(\log_{10}10^n\)</span> is equal to <span class="process-math">\(n\text{,}\)</span> the number of trailing zeros behind the initial <span class="process-math">\(1\)</span> in the decimal expansion of <span class="process-math">\(10^n\text{.}\)</span> Equivalently, <span class="process-math">\(\log_{10}10^n\)</span> is one less than the number of digits in the decimal expansion of <span class="process-math">\(10^n\text{.}\)</span> What about for an arbitrary positive number <span class="process-math">\(x\)</span> that is <em class="emphasis">not</em> a perfect power of 10? In that case, we can find an <span class="process-math">\(n\)</span> such that</div>
+<div class="displaymath process-math" id="ss_log_def_alg-12-16">
+\begin{align*}
+10^n \amp \leq x &lt; 10^{n+1}\text{.}
+\end{align*}
+</div>
+<div class="para">In terms of decimal expansions, this means that <span class="process-math">\(x\)</span> has at least as many decimals of <span class="process-math">\(10^n\text{,}\)</span> and fewer decimals than <span class="process-math">\(10^{n+1}\text{:}\)</span> i.e., <span class="process-math">\(x\)</span> has <span class="process-math">\(n+1\)</span> digits in its decimal expansion. This fact is reflected in the value <span class="process-math">\(\log_{10}x\text{.}\)</span> Since, as we make official below, <span class="process-math">\(\log_{10}\)</span> is an <em class="emphasis">increasing</em> function, the inequality <span class="process-math">\(10^n\leq x&lt; 10^{n+1}\)</span> implies</div>
+<div class="displaymath process-math" id="ss_log_def_alg-12-27">
+\begin{align*}
+n\amp \leq \log_{10} x &lt; n+1\text{.}
+\end{align*}
+</div>
+<div class="para">Thus <span class="process-math">\(\log_{10} x\text{,}\)</span> <em class="emphasis">rounded to the nearest integer</em> below <span class="process-math">\(x\text{,}\)</span> is equal to one less than the number of digits in the decimal expansion of <span class="process-math">\(x\text{.}\)</span> Let’s verify this with some examples, making use of technology:</div>
+<div class="displaymath process-math" id="ss_log_def_alg-12-32">
+\begin{align*}
+\log_{10} \underset{\boxed{2} \text{ digits}}{23}\amp \approx \boxed{1}.3617 \\
+\log_{10} \underset{\boxed{3} \text{ digits}}{500} \amp \approx \boxed{2}.6990 \\
+\log_{10} \underset{\boxed{4} \text{ digits}}{7000} \amp \approx \boxed{3}.8451 \\
+\log_{10} \underset{\boxed{6} \text{ digits}}{125000} \amp \approx \boxed{5}.0969 \text{.}
+\end{align*}
+</div>
+<div class="para">Put another way, the number of digits in the decimal expansion of <span class="process-math">\(x\)</span> is equal to the <em class="emphasis">integer part</em> of <span class="process-math">\(\log_{10}x\text{.}\)</span> Because of the prevalence of base-10 logarithms, <span class="process-math">\(\log_{10}x\)</span> is often written simply as <span class="process-math">\(\log x\text{.}\)</span> We make this official now.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ss_log_def_alg-12" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="definition definition-like" id="d_log_10"><h3 class="heading">
+<span class="type">Definition</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.11.6</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Base-<span class="process-math">\(10\)</span> logarithm.</span>
+</h3>
+<div class="para" id="d_log_10-3-1">The <dfn class="terminology">base-<span class="process-math">\(10\)</span> logarithm</dfn> is the logarithmic function <span class="process-math">\(\log_{10}\text{,}\)</span> which we will often write simply as <span class="process-math">\(\log\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#d_log_10-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="d_log_10-3-2">Given a positive real number <span class="process-math">\(x\text{,}\)</span> if <span class="process-math">\(n\)</span> is the integer part of <span class="process-math">\(\log_{10} x\text{,}\)</span> then <span class="process-math">\(x\)</span> has <span class="process-math">\(n+1\)</span> digits in its decimal expansion.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#d_log_10-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Definition 2.11.6: Base-10 logarithm"><a tabindex="-1" href="#d_log_10" title="Copy heading and permalink for Definition 2.11.6: Base-10 logarithm" aria-label="Copy heading and permalink for Definition 2.11.6: Base-10 logarithm">🔗</a></div>
+</article>
+<div class="para" id="ss_log_def_alg-14">As a fun application of the change of base formula, we can estimate the number of digits in the decimal expansion of a big power of <span class="process-math">\(2\text{,}\)</span> as long as we can approximate <span class="process-math">\(\log_{2}10\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ss_log_def_alg-14" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="example example-like" id="eg_power_of_2_base_10"><h3 class="heading">
+<span class="type">Example</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.11.7</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">How big is <span class="process-math">\(2^n\text{?}\)</span></span>
+</h3>
+<div class="para" id="eg_power_of_2_base_10-2-1">Use the change of base formula, and the fact that <span class="process-math">\(3 &lt; \log_2 10&lt; 4\)</span> to derive an approximation for the number of digits in the decimal expansion of <span class="process-math">\(2^n\)</span> for <span class="process-math">\(n\)</span> a positive integer.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_power_of_2_base_10-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="eg_power_of_2_base_10-2-2">Check your result on the integers <span class="process-math">\(2^{10}\)</span> and <span class="process-math">\(2^{50}\text{,}\)</span> using technology.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_power_of_2_base_10-2-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="eg_power_of_2_base_10-3" class="solution solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Solution</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="solution solution-like knowl__content">
+<div class="para logical" id="eg_power_of_2_base_10-3-1">
+<div class="para">Let <span class="process-math">\(d(n)\)</span> be the number of digits of the decimal expansion of <span class="process-math">\(2^n\text{.}\)</span> From our discussion above, we know that <span class="process-math">\(d(n)\)</span> is one more than the integer part of <span class="process-math">\(\log 2^n\text{.}\)</span> Using the change of base formula between from base-<span class="process-math">\(10\)</span> to base-<span class="process-math">\(2\text{,}\)</span> we have</div>
+<div class="displaymath process-math" id="eg_power_of_2_base_10-3-1-7">
+\begin{align*}
+\log 2^n \amp = \log_{10}2^n \\
+\amp = \frac{\log_2 2^n}{\log_2 10}\\
+\amp = \frac{n}{\log_2 10}\text{.}
+\end{align*}
+</div>
+<div class="para">Since <span class="process-math">\(3\leq \log_2 10\leq 4\text{,}\)</span> we have</div>
+<div class="displaymath process-math" id="eg_power_of_2_base_10-3-1-9">
+\begin{align*}
+\frac{n}{4} \amp \leq \log 2^n=\frac{n}{\log_2 10}\leq \frac{n}{3} \text{.}
+\end{align*}
+</div>
+<div class="para">Putting it all together, we see that</div>
+<div class="displaymath process-math" id="eg_power_of_2_base_10-3-1-10">
+\begin{align*}
+\frac{n}{4}\amp \leq d(n) \leq \frac{n}{3}+1 
+\end{align*}
+</div>
+<div class="para">In particular, we estimate that <span class="process-math">\(2^{10}\)</span> has between <span class="process-math">\(10/4=2.5\)</span> and <span class="process-math">\(10/3+1\approx 4.3\)</span> digits. More precisely, since the number of digits is an integer, <span class="process-math">\(2^{10}\)</span> should have between <span class="process-math">\(3\)</span> and <span class="process-math">\(4\)</span> digits. In fact, we have</div>
+<div class="displaymath process-math" id="eg_power_of_2_base_10-3-1-17">
+\begin{align*}
+2^{10} \amp =(2^{5})^2\\
+\amp =(32)^2\\
+\amp = 1024\text{.}
+\end{align*}
+</div>
+<div class="para">Our estimate is correct!</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_power_of_2_base_10-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para logical" id="eg_power_of_2_base_10-3-2">
+<div class="para">Similarly, since <span class="process-math">\(50/4=12.5\)</span> and <span class="process-math">\(50/3\approx 16.7\text{,}\)</span> <span class="process-math">\(2^{50}\)</span> should have between <span class="process-math">\(13\)</span> and <span class="process-math">\(16\)</span> digits. In fact, using technology, we find that</div>
+<div class="displaymath process-math" id="eg_power_of_2_base_10-3-2-6">
+\begin{align*}
+2^{50} \amp = 1,125,899,906,842,624 \text{,}
+\end{align*}
+</div>
+<div class="para">which has <span class="process-math">\(16\)</span> digits. Again, our estimate was correct!</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_power_of_2_base_10-3-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="para" id="eg_power_of_2_base_10-3-3">You may have noticed that the upper bound of estimates yielded for <span class="process-math">\(d(n)\)</span> happened to be equal to the actual answer. This is just a happy accident for the values of <span class="process-math">\(n\)</span> we chose. For example, <span class="process-math">\(2^{12}=4096\)</span> has <span class="process-math">\(4\)</span> digits, whereas our estimation method predicts between <span class="process-math">\(3\)</span> and <span class="process-math">\(5\)</span> digits.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#eg_power_of_2_base_10-3-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Solution 2.11.7.1"><a tabindex="-1" href="#eg_power_of_2_base_10-3" title="Copy heading and permalink for Solution 2.11.7.1" aria-label="Copy heading and permalink for Solution 2.11.7.1">🔗</a></div>
+</div></details>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Example 2.11.7: How big is 2^n"><a tabindex="-1" href="#eg_power_of_2_base_10" title="Copy heading and permalink for Example 2.11.7: How big is 2^n" aria-label="Copy heading and permalink for Example 2.11.7: How big is 2^n">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Subsection: Definition and algebraic properties"><a tabindex="-1" href="#ss_log_def_alg" title="Copy heading and permalink for Subsection: Definition and algebraic properties" aria-label="Copy heading and permalink for Subsection: Definition and algebraic properties">🔗</a></div>
+</section>
+<section class="subsection" id="ss_log_graph">
+<h2 class="heading hide-type">
+<span class="type">Subsection</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Graphical properties</span>
+</h2>
+<div class="para logical" id="ss_log_graph-2">
+<div class="para">Just as with the algebraic properties, we can derive graphical properties of logarithmic functions using their inverse relation to exponential functions. With the exception of the statement about continuity, the following theorem follows almost immediately from <a href="s_exp_lim_deriv.html#th_exp_props_graphical" class="xref" data-knowl="./knowl/xref/th_exp_props_graphical.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.9.5: Graphical properties of f(x)=b^x">Theorem 2.9.5</a> and <a href="s_inverse_func.html#th_inverse_function" class="xref" data-knowl="./knowl/xref/th_inverse_function.html" data-reveal-label="Reveal" data-close-label="Close" title="Theorem 2.10.25: Inverse function compendium">Theorem 2.10.25</a>. For example, letting <span class="process-math">\(f(x)=b^x\text{,}\)</span> since we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_exp_props_graphical.html ./knowl/xref/th_inverse_function.html" id="ss_log_graph-2-4">
+\begin{align*}
+\operatorname{domain} f \amp = \R\\
+\range f \amp =(0,\infty)\text{,}
+\end{align*}
+</div>
+<div class="para">and since <span class="process-math">\(\log_b\)</span> is the inverse of <span class="process-math">\(f\text{,}\)</span> we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/th_exp_props_graphical.html ./knowl/xref/th_inverse_function.html" id="ss_log_graph-2-7">
+\begin{align*}
+\operatorname{domain} \log_b \amp = (0,\infty)\\
+\range \log_b \amp = \R\text{.}
+\end{align*}
+</div>
+<div class="para">Similarly, the monotonic and concavity properties of <span class="process-math">\(\log_b\)</span> can be derived by seeing what happens when you reflect the graph of <span class="process-math">\(f(x)=b^x\)</span> through the line <span class="process-math">\(y=x\)</span> to obtain the graph of <span class="process-math">\(\log_b\text{.}\)</span>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ss_log_graph-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<article class="theorem theorem-like" id="th_log_props_graphical"><h3 class="heading">
+<span class="type">Theorem</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.11.8</span><span class="period heading-divison-mark heading-divison-mark__period">.</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Graphical properties of <span class="process-math">\(\log_b\)</span>.</span>
+</h3>
+<div class="para logical" id="th_log_props_graphical-2-1">
+<div class="para">Let <span class="process-math">\(b\)</span> be a positive real number, <span class="process-math">\(b\ne 1\text{.}\)</span>
+</div>
+<ol class="decimal" id="th_log_props_graphical-2-1-3">
+<li id="th_log_props_graphical-2-1-3-1">
+<div class="para" id="th_log_props_graphical-2-1-3-1-1">
+<span class="process-math">\(\log_b\)</span> is a continuous function.<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#th_log_props_graphical-2-1-3-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 1"><a tabindex="-1" href="#th_log_props_graphical-2-1-3-1" title="Copy heading and permalink for Item 1" aria-label="Copy heading and permalink for Item 1">🔗</a></div>
+</li>
+<li id="th_log_props_graphical-2-1-3-2">
+<div class="para" id="th_log_props_graphical-2-1-3-2-1">We have <span class="process-math">\(\operatorname{domain} \log_b=(0,\infty)\)</span> and <span class="process-math">\(\range \log_b=\R\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#th_log_props_graphical-2-1-3-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 2"><a tabindex="-1" href="#th_log_props_graphical-2-1-3-2" title="Copy heading and permalink for Item 2" aria-label="Copy heading and permalink for Item 2">🔗</a></div>
+</li>
+<li id="th_log_props_graphical-2-1-3-3">
+<div class="para" id="th_log_props_graphical-2-1-3-3-1">The <span class="process-math">\(x\)</span>-intercept of the graph of <span class="process-math">\(\log_b\)</span> is <span class="process-math">\((1,0)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#th_log_props_graphical-2-1-3-3-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 3"><a tabindex="-1" href="#th_log_props_graphical-2-1-3-3" title="Copy heading and permalink for Item 3" aria-label="Copy heading and permalink for Item 3">🔗</a></div>
+</li>
+<li id="th_log_props_graphical-2-1-3-4">
+<div class="para logical" id="th_log_props_graphical-2-1-3-4-1">
+<div class="para">Assume <span class="process-math">\(b&gt; 1\text{.}\)</span>
+</div>
+<ul class="disc" id="th_log_props_graphical-2-1-3-4-1-2">
+<li id="th_log_props_graphical-2-1-3-4-1-2-1">
+<div class="para" id="th_log_props_graphical-2-1-3-4-1-2-1-1">
+<span class="process-math">\(\log_b\)</span> is increasing and concave down on <span class="process-math">\((0,\infty)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#th_log_props_graphical-2-1-3-4-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#th_log_props_graphical-2-1-3-4-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="th_log_props_graphical-2-1-3-4-1-2-2">
+<div class="para" id="th_log_props_graphical-2-1-3-4-1-2-2-1">
+<span class="process-math">\(\lim\limits_{x\to 0^+}\log_b x=-\infty\)</span> and <span class="process-math">\(\lim\limits_{x\to \infty}\log_b x=\infty\text{.}\)</span> As a result, the graph of <span class="process-math">\(\log_b\)</span> has a vertical asymptote at <span class="process-math">\(x=0\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#th_log_props_graphical-2-1-3-4-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#th_log_props_graphical-2-1-3-4-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#th_log_props_graphical-2-1-3-4-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 4"><a tabindex="-1" href="#th_log_props_graphical-2-1-3-4" title="Copy heading and permalink for Item 4" aria-label="Copy heading and permalink for Item 4">🔗</a></div>
+</li>
+<li id="th_log_props_graphical-2-1-3-5">
+<div class="para logical" id="th_log_props_graphical-2-1-3-5-1">
+<div class="para">Assume <span class="process-math">\(0&lt; b&lt; 1\text{.}\)</span>
+</div>
+<ul class="disc" id="th_log_props_graphical-2-1-3-5-1-2">
+<li id="th_log_props_graphical-2-1-3-5-1-2-1">
+<div class="para" id="th_log_props_graphical-2-1-3-5-1-2-1-1">
+<span class="process-math">\(\log_b\)</span> is decreasing and concave up on <span class="process-math">\((0,\infty)\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#th_log_props_graphical-2-1-3-5-1-2-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#th_log_props_graphical-2-1-3-5-1-2-1" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+<li id="th_log_props_graphical-2-1-3-5-1-2-2">
+<div class="para" id="th_log_props_graphical-2-1-3-5-1-2-2-1">
+<span class="process-math">\(\lim\limits_{x\to 0^+}\log_b x=\infty\)</span> and <span class="process-math">\(\lim\limits_{x\to \infty}\log_b x=-\infty\text{.}\)</span> As a result, the graph of <span class="process-math">\(\log_b\)</span> has a vertical asymptote at <span class="process-math">\(x=0\text{.}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#th_log_props_graphical-2-1-3-5-1-2-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item"><a tabindex="-1" href="#th_log_props_graphical-2-1-3-5-1-2-2" title="Copy heading and permalink for Item" aria-label="Copy heading and permalink for Item">🔗</a></div>
+</li>
+</ul>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#th_log_props_graphical-2-1-3-5-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Item 5"><a tabindex="-1" href="#th_log_props_graphical-2-1-3-5" title="Copy heading and permalink for Item 5" aria-label="Copy heading and permalink for Item 5">🔗</a></div>
+</li>
+</ol>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#th_log_props_graphical-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Theorem 2.11.8: Graphical properties of \log_b"><a tabindex="-1" href="#th_log_props_graphical" title="Copy heading and permalink for Theorem 2.11.8: Graphical properties of \log_b" aria-label="Copy heading and permalink for Theorem 2.11.8: Graphical properties of \log_b">🔗</a></div>
+</article>
+<div class="para logical" id="ss_log_graph-4">
+<div class="para">As with exponential functions, the graphical properties above can be used to quickly produce a graph of <span class="process-math">\(\log_b\text{.}\)</span> Qualitatively, the graphs of any two logarithmic functions with base greater than <span class="process-math">\(1\)</span> look very much alike, differing only in their steepness; indeed, using the change of base formula, since</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig_log_graph.html" id="ss_log_graph-4-3">
+\begin{align*}
+\log_c x \amp =\frac{1}{\log_b c}\log_b x\text{,}
+\end{align*}
+</div>
+<div class="para">we see that the graph of <span class="process-math">\(\log_c x\)</span> is obtained by vertically scaling the graph of <span class="process-math">\(\log_b x\)</span> by the factor <span class="process-math">\(1/(\log_b c)\text{.}\)</span> Similar comments apply to the (less common) case of logarithmic functions with base <span class="process-math">\(b\)</span> satisfying <span class="process-math">\(0&lt; b&lt; 1\text{.}\)</span> As such the graphs of <span class="process-math">\(\log_2\)</span> and <span class="process-math">\(\log_{1/2}\)</span> in <a href="s_log.html#fig_log_graph" class="xref" data-knowl="./knowl/xref/fig_log_graph.html" data-reveal-label="Reveal" data-close-label="Close" title="Figure 2.11.9">Figure 2.11.9</a> can be used as models for the general case. Note how these two graphs appear to be mirror images of one another through the <span class="process-math">\(x\)</span>-axis. This is explained once again by the change of base formula, since we have</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig_log_graph.html" id="ss_log_graph-4-13">
+\begin{align*}
+\log_{1/b} x \amp =\frac{\log_b x}{\log_b (1/b)}\\
+\amp = \frac{\log_b x}{-1}\\
+\amp =-\log_b x\text{.}
+\end{align*}
+</div>
+<div class="para">Lastly, we observe that just as with exponential functions, it is possible to make our graphs more precise by adding plotted points. Working base-2, or base-<span class="process-math">\(1/2\)</span> this is easily done by plotting points <span class="process-math">\(P=(x,y)\)</span> with <span class="process-math">\(x=2^n\text{.}\)</span> Accordingly in the graphs below you find the following plotted points for various <span class="process-math">\(n\text{:}\)</span>
+</div>
+<div class="displaymath process-math" data-contains-math-knowls="./knowl/xref/fig_log_graph.html" id="ss_log_graph-4-18">
+\begin{align*}
+(2^n, \log_2 2^n) \amp = (2^n, n) \\
+(2^n, \log_{1/2} 2^n) \amp = (2^n, -n) \text{.}
+\end{align*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#ss_log_graph-4" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<figure class="figure figure-like" id="fig_log_graph">
+<div class="sidebyside">
+<div class="sbsrow" style="margin-left:0%;margin-right:0%;grid-template-columns:50% 50%;column-gap:0%;">
+<div class="sbspanel sbspanel--top top" style="">
+<figure class="figure figure-like" id="fig_log_base_2"><div class="image-box"><img src="generated/sageplot/fig_log_base_2-2.svg" role="img" class="contained" alt="Graph of base-two log function"></div>
+<figcaption><span class="codenumber">(a)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(f(x)=\log_2 x\)</span><div class="autopermalink" aria-hidden="true" data-description="Figure 2.11.9(a)"><a tabindex="-1" href="#fig_log_base_2" title="Copy heading and permalink for Figure 2.11.9(a)" aria-label="Copy heading and permalink for Figure 2.11.9(a)">🔗</a></div></figcaption>
+</figure>
+</div>
+<div class="sbspanel sbspanel--top top" style="">
+<figure class="figure figure-like" id="fig_log_base_half"><div class="image-box"><img src="generated/sageplot/fig_log_base_half-2.svg" role="img" class="contained" alt="Graph of base-one-half log function"></div>
+<figcaption><span class="codenumber">(b)</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="process-math">\(f(x)=\log_{1/2} x\)</span><div class="autopermalink" aria-hidden="true" data-description="Figure 2.11.9(b)"><a tabindex="-1" href="#fig_log_base_half" title="Copy heading and permalink for Figure 2.11.9(b)" aria-label="Copy heading and permalink for Figure 2.11.9(b)">🔗</a></div></figcaption>
+</figure>
+</div>
+</div>
+</div>
+<figcaption><span class="type">Figure</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber">2.11.9<span class="period heading-divison-mark heading-divison-mark__period">.</span></span><span class="space heading-divison-mark heading-divison-mark__space"> </span>Graphs of logarithmic functions<div class="autopermalink" aria-hidden="true" data-description="Figure 2.11.9"><a tabindex="-1" href="#fig_log_graph" title="Copy heading and permalink for Figure 2.11.9" aria-label="Copy heading and permalink for Figure 2.11.9">🔗</a></div></figcaption>
+</figure><div class="autopermalink" aria-hidden="true" data-description="Subsection: Graphical properties"><a tabindex="-1" href="#ss_log_graph" title="Copy heading and permalink for Subsection: Graphical properties" aria-label="Copy heading and permalink for Subsection: Graphical properties">🔗</a></div>
+</section>
+<section class="exercises" id="ex_log">
+<h2 class="heading hide-type">
+<span class="type">Exercises</span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="codenumber"></span><span class="space heading-divison-mark heading-divison-mark__space"> </span><span class="title">Exercises</span>
+</h2>
+<article class="exercise exercise-like" id="ez-exp-log-properties-WW1"><h3 class="heading"><span class="codenumber">1<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div id="ez-exp-log-properties-WW1-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="52" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="webwork2" data-sourceFilePath="Library/Rochester/setAlgebra30LogExpEqns/problem9.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('ez-exp-log-properties-WW1-ww-inner')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-ez-exp-log-properties-WW1-1-1-1">Solve for <span class="process-math">\(x\text{:}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#extracted-ez-exp-log-properties-WW1-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="extracted-ez-exp-log-properties-WW1-1-1-2">
+<div class="displaymath process-math" id="extracted-ez-exp-log-properties-WW1-1-1-2-1">
+\begin{equation*}
+5^{x} = 11
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#extracted-ez-exp-log-properties-WW1-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="extracted-ez-exp-log-properties-WW1-1-1-3">
+<span class="process-math">\(x =\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#extracted-ez-exp-log-properties-WW1-1-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="extracted-ez-exp-log-properties-WW1-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para" id="extracted-ez-exp-log-properties-WW1-1-2-1">
+<span class="process-math">\(1.48989610240498\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#extracted-ez-exp-log-properties-WW1-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 1.1"><a tabindex="-1" href="#extracted-ez-exp-log-properties-WW1-1-2" title="Copy heading and permalink for Answer 1.1" aria-label="Copy heading and permalink for Answer 1.1">🔗</a></div>
+</div></details>
+</div>
+</div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 1"><a tabindex="-1" href="#ez-exp-log-properties-WW1" title="Copy heading and permalink for Exercise 1" aria-label="Copy heading and permalink for Exercise 1">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ez-exp-log-properties-WW2"><h3 class="heading"><span class="codenumber">2<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div id="ez-exp-log-properties-WW2-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="53" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="webwork2" data-sourceFilePath="Library/Rochester/setAlgebra30LogExpEqns/problem11.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('ez-exp-log-properties-WW2-ww-inner')">Activate</button></div>
+<div class="problem-contents">
+<div class="para" id="extracted-ez-exp-log-properties-WW2-1-1-1">Solve for <span class="process-math">\(x\text{:}\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#extracted-ez-exp-log-properties-WW2-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para logical" id="extracted-ez-exp-log-properties-WW2-1-1-2">
+<div class="displaymath process-math" id="extracted-ez-exp-log-properties-WW2-1-1-2-1">
+\begin{equation*}
+9 \cdot 6^{3 x -2} = 77
+\end{equation*}
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#extracted-ez-exp-log-properties-WW2-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="extracted-ez-exp-log-properties-WW2-1-1-3">
+<span class="process-math">\(x =\)</span> <span class="fillin underline" role="img" aria-label="20-character blank" style="width: 9.090909090909092em;"></span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#extracted-ez-exp-log-properties-WW2-1-1-3" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="extracted-ez-exp-log-properties-WW2-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para" id="extracted-ez-exp-log-properties-WW2-1-2-1">
+<span class="process-math">\(1.06600986002552\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#extracted-ez-exp-log-properties-WW2-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 2.1"><a tabindex="-1" href="#extracted-ez-exp-log-properties-WW2-1-2" title="Copy heading and permalink for Answer 2.1" aria-label="Copy heading and permalink for Answer 2.1">🔗</a></div>
+</div></details>
+</div>
+</div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 2"><a tabindex="-1" href="#ez-exp-log-properties-WW2" title="Copy heading and permalink for Exercise 2" aria-label="Copy heading and permalink for Exercise 2">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ez-exp-log-properties-WW4"><h3 class="heading"><span class="codenumber">3<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div id="ez-exp-log-properties-WW4-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="54" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="webwork2" data-sourceFilePath="Library/Rochester/setAlgebra30LogExpEqns/srw4_4_11.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('ez-exp-log-properties-WW4-ww-inner')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-ez-exp-log-properties-WW4-1-1-1">
+<div class="para">Find the solution of the exponential equation</div>
+<div class="displaymath process-math" id="extracted-ez-exp-log-properties-WW4-1-1-1-1">
+\begin{equation*}
+12+4^{5x}=20
+\end{equation*}
+</div>
+<div class="para">correct to at least four decimal places.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#extracted-ez-exp-log-properties-WW4-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="extracted-ez-exp-log-properties-WW4-1-1-2">
+<span class="process-math">\(x=\)</span> <span class="fillin underline" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#extracted-ez-exp-log-properties-WW4-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="extracted-ez-exp-log-properties-WW4-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para" id="extracted-ez-exp-log-properties-WW4-1-2-1">
+<span class="process-math">\(0.3\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#extracted-ez-exp-log-properties-WW4-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 3.1"><a tabindex="-1" href="#extracted-ez-exp-log-properties-WW4-1-2" title="Copy heading and permalink for Answer 3.1" aria-label="Copy heading and permalink for Answer 3.1">🔗</a></div>
+</div></details>
+</div>
+</div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 3"><a tabindex="-1" href="#ez-exp-log-properties-WW4" title="Copy heading and permalink for Exercise 3" aria-label="Copy heading and permalink for Exercise 3">🔗</a></div>
+</article>
+<article class="exercise exercise-like" id="ez-exp-log-properties-WW5"><h3 class="heading"><span class="codenumber">4<span class="period heading-divison-mark heading-divison-mark__period">.</span></span></h3>
+<div id="ez-exp-log-properties-WW5-ww-inner" class="exercise-wrapper" data-domain="https://webwork-ptx.aimath.org" data-seed="55" data-localize-correct="Correct" data-localize-incorrect="Incorrect" data-localize-blank="Blank" data-localize-submit="Submit" data-localize-check-responses="Check Responses" data-localize-reveal="Reveal" data-localize-randomize="Randomize" data-localize-reset="Reset" data-localize-hint="Hint" data-localize-solution="Solution" data-origin="webwork2" data-sourceFilePath="Library/Rochester/setAlgebra30LogExpEqns/srw4_4_25.pg" data-courseID="anonymous" data-userID="anonymous" data-coursePassword="anonymous" aria-live="polite">
+<div class="problem-buttons"><button class="webwork-button" onclick="handleWW('ez-exp-log-properties-WW5-ww-inner')">Activate</button></div>
+<div class="problem-contents">
+<div class="para logical" id="extracted-ez-exp-log-properties-WW5-1-1-1">
+<div class="para">Find the solution of the exponential equation</div>
+<div class="displaymath process-math" id="extracted-ez-exp-log-properties-WW5-1-1-1-1">
+\begin{equation*}
+100 (1.04)^{2t} = 500000
+\end{equation*}
+</div>
+<div class="para">in terms of logarithms, or correct to four decimal places.</div>
+<div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#extracted-ez-exp-log-properties-WW5-1-1-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div> 
+<div class="para" id="extracted-ez-exp-log-properties-WW5-1-1-2">
+<span class="process-math">\(t=\)</span> <span class="fillin underline" role="img" aria-label="25-character blank" style="width: 11.3636363636364em;"></span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#extracted-ez-exp-log-properties-WW5-1-1-2" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="solutions">
+<details id="extracted-ez-exp-log-properties-WW5-1-2" class="answer solution-like born-hidden-knowl"><summary class="knowl__link"><span class="type">Answer</span><span class="period heading-divison-mark heading-divison-mark__period">.</span></summary>
+<div class="answer solution-like knowl__content">
+<div class="para" id="extracted-ez-exp-log-properties-WW5-1-2-1">
+<span class="process-math">\(108.580294781097\)</span><div class="autopermalink" aria-hidden="true" data-description="Paragraph"><a tabindex="-1" href="#extracted-ez-exp-log-properties-WW5-1-2-1" title="Copy heading and permalink for Paragraph" aria-label="Copy heading and permalink for Paragraph">🔗</a></div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Answer 4.1"><a tabindex="-1" href="#extracted-ez-exp-log-properties-WW5-1-2" title="Copy heading and permalink for Answer 4.1" aria-label="Copy heading and permalink for Answer 4.1">🔗</a></div>
+</div></details>
+</div>
+</div>
+</div>
+<div class="autopermalink" aria-hidden="true" data-description="Exercise 4"><a tabindex="-1" href="#ez-exp-log-properties-WW5" title="Copy heading and permalink for Exercise 4" aria-label="Copy heading and permalink for Exercise 4">🔗</a></div>
+</article><div class="autopermalink" aria-hidden="true" data-description="Exercises"><a tabindex="-1" href="#ex_log" title="Copy heading and permalink for Exercises" aria-label="Copy heading and permalink for Exercises">🔗</a></div>
+</section><div class="autopermalink" aria-hidden="true" data-description="Section 2.11: Logarithmic functions"><a tabindex="-1" href="#s_log" title="Copy heading and permalink for Section 2.11: Logarithmic functions" aria-label="Copy heading and permalink for Section 2.11: Logarithmic functions">🔗</a></div>
+</section>
+</div>
+<div id="ptx-content-footer" class="ptx-content-footer">
+<a class="previous-button button" href="s_inverse_func.html" title="Previous"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cb;</span><span class="name">Prev</span></a><a class="top-button button" href="#" title="Top"><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5ce;</span><span class="name">Top</span></a><a class="next-button button" href="s_exp_deriv.html" title="Next"><span class="name">Next</span><span class="icon material-symbols-outlined" aria-hidden="true">&#xe5cc;</span></a>
+</div></main>
+</div>
+<div id="ptx-page-footer" class="ptx-page-footer">
+<a class="pretext-link" href="https://pretextbook.org" title="PreTeXt"><div class="logo"><svg xmlns="http://www.w3.org/2000/svg" height="100%" viewBox="338 3000 8772 6866" role="img"><title>PreTeXt logo</title><g style="stroke-width:.025in; stroke:currentColor; fill:none"><polyline points="472,3590 472,9732 " style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round; "></polyline><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,9448 A 4660 4660  0  0  1  8598  9259"></path><path style="stroke-width:174;stroke-linecap:butt;" d="M 4488,9685 A 4228 4228  0  0  0   472  9732"></path><path style="stroke-width:126;stroke-linecap:butt;" d="M 4724,3590 A 4241 4241  0  0  1  8598  3496"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,3496  A 4241 4241  0  0  1  4724  3590"></path><path style="stroke-width:126;stroke-linecap:round;" d="M 850,9259  A 4507 4507  0  0  1  4724  9448"></path><polyline points="5385,4299 4062,8125" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8598,3496 8598,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="850,3496 850,9259" style="stroke-width:126; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="4960,9685 4488,9685" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="3070,4582 1889,6141 3070,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="6418,4582 7600,6141 6418,7700" style="stroke-width:300; stroke-linejoin:miter; stroke-linecap:round;"></polyline><polyline points="8976,3590 8976,9732" style="stroke-width:174; stroke-linejoin:miter; stroke-linecap:round;"></polyline><path style="stroke-width:174;stroke-linecap:butt;" d="M 4960,9685 A 4228 4228  0  0  1  8976  9732"></path></g></svg></div></a><a class="runestone-link" href="https://runestone.academy" title="Runestone Academy"><img class="logo" src="https://runestone.academy/runestone/static/images/RAIcon_cropped.png" alt="Runstone Academy logo"></a><a class="mathjax-link" href="https://www.mathjax.org" title="MathJax"><img class="logo" src="https://www.mathjax.org/badge/badge-square-2.png" alt="MathJax logo"></a>
+</div>
+</body>
+</html>
