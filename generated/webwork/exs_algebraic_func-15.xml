@@ -1,38 +1,36 @@
 <?xml version='1.0' encoding='utf-8'?>
 <webwork-reps version="2" webwork2_major_version="2" webwork2_minor_version="20" xml:id="extracted-exs_algebraic_func-15" assembly-id="exs_algebraic_func-15">
-  <static seed="32" source="Library/LoyolaChicago/Precalc/Chap9Sec4/Q05.pg">
-    <statement><p>Is the function below a rational function?
-If it is, write it in <em>reduced</em> form as a ratio of polynomials <m>\displaystyle \frac{p(x)}{q(x)}</m>.  If it is not, enter <em>NONE</em> in both blanks.  Do not leave any blanks empty.</p>
-<tabular valign="middle">
+  <static seed="30" source="Library/Rochester/setAlgebra32EqnSystems/modelling.pg">
+    <statement><p>Given the table below, find a cubic equation in standard form for <m>g(x)</m>.</p>
+<tabular bottom="medium" left="medium" right="medium" top="medium">
 <row>
-<cell><m>\displaystyle \frac{ x^2}{x-3} - \frac{2}{x-6} =</m></cell>
-<cell><fillin characters="20" name="AnSwEr0001"/>
-<p><fillin characters="20" name="AnSwEr0002"/></p></cell>
+<cell>x</cell>
+<cell>6</cell>
+<cell>-8</cell>
+<cell>3</cell>
+<cell>9</cell>
+</row>
+<row>
+<cell>g(x)</cell>
+<cell>-374</cell>
+<cell>1180</cell>
+<cell>-41</cell>
+<cell>-1319</cell>
 </row>
 </tabular>
+<p><m>g(x) =</m> <fillin characters="25" name="AnSwEr0001"/>.</p>
 </statement>
+    <hint><m>y = Ax^3 +Bx^2+Cx+D</m>.
+
+
+
+</hint>
     <answer>
       <p>
-        <m>x^{3}-6x^{2}-2x+6</m>
+        <m>-2x^{3}+2x^{2}+\left(-3\right)x+4</m>
       </p>
     </answer>
-    <answer>
-      <p>
-        <m>x^{2}-9x+18</m>
-      </p>
-    </answer>
-    <solution><alert>  SOLUTION </alert>
-
-
-
-This is a rational function, as we can put it in the form of one
-polynomial divided by another:
-<me>f(x) = \frac{x^2}{x-3}+\frac{2}{x-6} = \frac{(x^2)(x-6)}{(x-3)(x-6)}-\frac{2(x-3)}{(x-6)(x-3)} = \frac{x^3-6x^2 - 2x + 6}{x^2-9x+18}.</me>
-
-
-
-</solution>
   </static>
-  <rendering-data sourceFilePath="Library/LoyolaChicago/Precalc/Chap9Sec4/Q05.pg" origin="webwork2" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" passwd="anonymous" language="en-US"/>
-  <pg source="Library/LoyolaChicago/Precalc/Chap9Sec4/Q05.pg"/>
+  <rendering-data sourceFilePath="Library/Rochester/setAlgebra32EqnSystems/modelling.pg" origin="webwork2" domain="https://webwork-ptx.aimath.org" course-id="anonymous" user-id="anonymous" passwd="anonymous" language="en-US"/>
+  <pg source="Library/Rochester/setAlgebra32EqnSystems/modelling.pg"/>
 </webwork-reps>
